@@ -1,3 +1,4 @@
+
 buildscript {
     ext {
         springBootVersion = "1.4.2.RELEASE"
@@ -51,7 +52,7 @@ task dependenciesGraph(dependsOn: "dependenciesGraphDot", type: Exec) {
     commandLine "dot", "-O", "-Tpng", "graph.dot"
 }
 
-task clean(type: Delete) {
+task clean1(type: Delete) {
     delete "build"
 }
 

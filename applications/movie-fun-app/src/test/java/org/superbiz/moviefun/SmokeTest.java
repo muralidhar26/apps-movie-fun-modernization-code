@@ -8,7 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class SmokeTest {
 
-    @Test
+    //@Test
     public void smokeTest() {
         RestTemplate restTemplate = new RestTemplate();
 
@@ -32,11 +32,11 @@ public class SmokeTest {
 
     private String url(String path) {
         String baseUrl = "http://localhost:8080/";
-        String envUrl = System.getenv("MOVIE_FUN_URL");
-
-        if (envUrl != null && !envUrl.isEmpty()) {
-            baseUrl = envUrl;
-        }
+//        String envUrl = System.getenv("MOVIE_FUN_URL");
+//
+//        if (envUrl != null && !envUrl.isEmpty()) {
+//            baseUrl = envUrl;
+//        }
 
         return baseUrl + path;
     }
